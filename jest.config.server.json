@@ -1,0 +1,35 @@
+{
+  "verbose": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{js,jsx,ts}",
+    "!**/node_modules/**",
+    "!**/client/**",
+    "!**/coverage/**",
+    "!**/dist/**",
+    "!**/server/config/**",
+    "!**/verification/**"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "ts",
+    "json"
+  ],
+  "testRegex": "(./verification/server/.*|(\\.|/)(test|spec))\\.(jsx?|ts?)$",
+  "testPathIgnorePatterns": [
+    "<rootDir>/dist/",
+    "<rootDir>/verification/client",
+    "<rootDir>/node_modules/",
+    "<rootDir>/verification/server/helper/"
+  ],
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsconfig": {
+        "sourceMap": true
+      }
+    }
+  }
+}

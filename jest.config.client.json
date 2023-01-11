@@ -1,0 +1,42 @@
+{
+  "verbose": true,
+  "collectCoverage": true,
+  "collectCoverageFrom": [
+    "**/*.{ts,vue}",
+    "!**/shared/**",
+    "!**/node_modules/**",
+    "!**/coverage/**",
+    "!**/dist/**",
+    "!**/server/**",
+    "!**/verification/**"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "ts",
+    "json",
+    "vue"
+  ],
+  "testEnvironment": "jsdom",
+  "moduleNameMapper": {
+    "^~/(.*)": "<rootDir>/client/src/$1",
+    "^@components/(.*)": "<rootDir>/client/src/components/$1",
+    "^@shared/(.*)": "<rootDir>/shared/$1"
+  },
+  "testRegex": "(./verification/client/.*|(\\.|/)(test|spec))\\.(jsx?|ts?)$",
+  "testPathIgnorePatterns": [
+    "<rootDir>/dist/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/verification/client/helper/",
+    "<rootDir>/verification/server/",
+    "<rootDir>/verification/shared/"
+  ],
+  "transform": {
+    ".*\\.(vue)$": "@vue/vue3-jest",
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "globals": {
+    "ts-jest": {
+      "tsconfig": "./client/tsconfig.json"
+    }
+  }
+}
