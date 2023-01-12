@@ -2,6 +2,7 @@ module.exports = {
     root: true,
     parser: 'vue-eslint-parser',
     env: {
+        browser: true,
         node: true,
         jest: true
     },
@@ -16,6 +17,7 @@ module.exports = {
     extends: [
         'plugin:@typescript-eslint/recommended',
         'eslint:recommended',
+        'plugin:vue/vue3-recommended'
     ],
     rules: {
         "semi": ["error", "always"],

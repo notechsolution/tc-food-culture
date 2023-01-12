@@ -3,6 +3,8 @@
     "compilerOptions": {
         "outDir": "../dist",
         "baseUrl": "",
+        "target": "ES6",
         "module": "commonjs"
-    }
+    },
+    "include": ["../server/**/*.ts", "../server/**/*.d.ts"]
 }

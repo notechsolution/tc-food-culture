@@ -117,6 +117,11 @@
     "qs": "^6.11.0",
     "screenfull": "^6.0.2",
     "sortablejs": "^1.15.0",
-    "splitpanes": "^3.1.5"
+    "splitpanes": "^3.1.5",
+    "@testing-library/jest-dom": "^5.11.8",
+    "@types/mockjs": "^1.0.3",
+    "@types/pinyin": "^2.8.2",
+    "@vuedx/typecheck": "^0.7.4",
+    "@vuedx/typescript-plugin-vue": "^0.7.4"
   }
 }

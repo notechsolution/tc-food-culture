@@ -63,11 +63,11 @@ export const dynamicRoutes: Array<RouteRecordRaw> = [
 				},
 			},
 			{
-				path: '/seasonal',
-				name: 'seasonal',
-				component: () => import('/@/views/seasonal/index.vue'),
+				path: '/solarterms',
+				name: 'solarterms',
+				component: () => import('/@/views/solarterms/index.vue'),
 				meta: {
-					title: 'message.router.seasonal',
+					title: 'message.router.solarterms',
 					isLink: '',
 					isHide: false,
 					isKeepAlive: true,

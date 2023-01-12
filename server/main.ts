@@ -54,7 +54,8 @@ async function bootstrap() {
 
     initPassport(app.getHttpAdapter());
 
-    app.use('/api/*',conditionalCSRF);
+    // TODO: enable for security
+    // app.use('/api/*',conditionalCSRF);
     app.useGlobalFilters(new AllExceptionsFilter(logger));
     // app.useGlobalGuards(new DefaultAuthGuard());
     app.use((req, res, next) => {

@@ -74,7 +74,7 @@ export default {
 		layoutLinkView: '外鏈',
 		layoutIframeViewOne: '内嵌 iframe1',
 		layoutIframeViewTwo: '内嵌 iframe2',
-		seasonal: '節氣管理',
+		solarterms: '節氣管理',
 		recipe: '食譜管理',
 		ingredient: '食材管理'
 	},

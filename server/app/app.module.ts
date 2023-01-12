@@ -34,7 +34,8 @@ const models = FileUtils.loadModelsFromFiles('dist/server/**/*.entity.js');
 
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer): any {
-    consumer.apply(LoggingMiddleware, AuthMiddleware).forRoutes('*');
+    consumer.apply(LoggingMiddleware).forRoutes('*');
+    // consumer.apply(LoggingMiddleware, AuthMiddleware).forRoutes('*');
     consumer.apply(KeycloakAuthMiddleware).forRoutes('auth/login');
     consumer.apply(KeycloakCallbackMiddleware).forRoutes('auth/custom/callback');
   }

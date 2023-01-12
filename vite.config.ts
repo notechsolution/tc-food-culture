@@ -3,13 +3,10 @@ import { resolve } from 'path';
 import { defineConfig, loadEnv, ConfigEnv } from 'vite';
 import vueSetupExtend from 'vite-plugin-vue-setup-extend';
 
+const setAlias = (alias: [string, string][]) => alias.map(v => {return { find: v[0], replacement: resolve(__dirname, v[1]) };});
+
 const pathResolve = (dir: string) => {
 	return resolve(__dirname, '.', dir);
-};
-
-const alias: Record<string, string> = {
-	'/@': pathResolve('./client/src/'),
-	'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js',
 };
 
 const viteConfig = defineConfig((mode: ConfigEnv) => {
@@ -17,7 +14,13 @@ const viteConfig = defineConfig((mode: ConfigEnv) => {
 	return {
 		plugins: [vue(), vueSetupExtend()],
 		root: process.cwd(),
-		resolve: { alias },
+		resolve: {
+			alias: setAlias([
+				['/@', './client/src/'],
+				['vue-i18n', 'vue-i18n/dist/vue-i18n.cjs.js'],
+				['/server', './server']
+			])
+		},
 		base: mode.command === 'serve' ? './' : env.VITE_PUBLIC_PATH,
 		optimizeDeps: {
 			include: ['element-plus/lib/locale/lang/zh-cn', 'element-plus/lib/locale/lang/en', 'element-plus/lib/locale/lang/zh-tw'],

@@ -1,4 +1,4 @@
-import * as _ from 'underscore';
+import _ from 'lodash';
 import { BadRequestError } from './BadRequestError';
 import { InternalServerError } from './InternalServerError';
 

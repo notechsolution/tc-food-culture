@@ -1,4 +1,5 @@
 import { Prop } from '@nestjs/mongoose';
+import { now } from 'mongoose';
 
 export default class BaseEntity {
     @Prop()

@@ -74,7 +74,7 @@ export default {
 		layoutLinkView: 'LinkView',
 		layoutIframeViewOne: 'IframeViewOne',
 		layoutIframeViewTwo: 'IframeViewTwo',
-		seasonal: 'Seasonal Management',
+		solarterms: 'Seasonal Management',
 		recipe: 'Recipe Management',
 		ingredient: 'Ingredient Management'
 	},
